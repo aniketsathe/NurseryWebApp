@@ -1,0 +1,128 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid" style="align-content:center">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <span data-feather="home"></span>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="users"></span>
+                            Customers
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="layers"></span>
+                            Inventory
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="shopping-cart"></span>
+                            Purchase
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="shopping-cart"></span>
+                            Expenses
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="shopping-cart"></span>
+                            Bookings
+                        </a>
+                    </li>                   
+                    <!-- Add more links here -->
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Dashboard</h1>
+            </div>
+
+            <!-- Revenue, Sales, Purchase Cards -->
+            <div class="row">
+                <!-- Revenue -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">Revenue</div>
+                        <div class="card-body">
+                            <p>Total Revenue: <strong>@ViewBag.TotalRevenue</strong></p>
+                            <p>Yearly Revenue: <strong>@ViewBag.YearlyRevenue</strong></p>
+                            <p>Monthly Revenue: <strong>@ViewBag.MonthlyRevenue</strong></p>
+                            <p>Daily Revenue: <strong>@ViewBag.DailyRevenue</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sales -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-header bg-success text-white">Sales</div>
+                        <div class="card-body">
+                            <p>Total Sales: <strong>@ViewBag.TotalSales</strong></p>
+                            <p>Yearly Sales: <strong>@ViewBag.YearlySales</strong></p>
+                            <p>Monthly Sales: <strong>@ViewBag.MonthlySales</strong></p>
+                            <p>Daily Sales: <strong>@ViewBag.DailySales</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Purchase -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-header bg-warning text-white">Purchase</div>
+                        <div class="card-body">
+                            <p>Total Purchase: <strong>@ViewBag.TotalPurchase</strong></p>
+                            <p>Yearly Purchase: <strong>@ViewBag.YearlyPurchase</strong></p>
+                            <p>Monthly Purchase: <strong>@ViewBag.MonthlyPurchase</strong></p>
+                            <p>Daily Purchase: <strong>@ViewBag.DailyPurchase</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expenses -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-header bg-warning text-white">Expenses</div>
+                        <div class="card-body">
+                            <p>Total Expenses: <strong>@ViewBag.TotalExpenses</strong></p>
+                            <p>Yearly Expenses: <strong>@ViewBag.YearlyExpenses</strong></p>
+                            <p>Monthly Expenses: <strong>@ViewBag.MonthlyExpenses</strong></p>
+                            <p>Daily Expenses: <strong>@ViewBag.DailyExpenses</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bookings -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header bg-warning text-white">Bookings</div>
+                        <div class="card-body">
+                            <p>Total Bookings: <strong>@ViewBag.TotalBookings</strong></p>
+                            <p>Yearly Bookings: <strong>@ViewBag.YearlyBookings</strong></p>
+                            <p>Monthly Bookings: <strong>@ViewBag.MonthlyBookings</strong></p>
+                            <p>Daily Bookings: <strong>@ViewBag.DailyBookings</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
